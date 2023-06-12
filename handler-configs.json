@@ -1,0 +1,11 @@
+{
+    "com.ionos.api.cloud": {
+        "tokens": {
+            "00000000": "replace-this-with-token",
+            "00000001": "replace-this-with-a-different-token"
+        }
+    },
+    "heartbeat-monitor.email": {
+        "subject": "CUSTOM WARNING: Keep-alive expored for '{name}'"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "metadata": {
+      "name": "Unnamed Server in Test VDC",
+      "uuid": "00000000-0000-0000-0000-000000000000",
+      "datacenterUuid": "00000000-0000-0000-0000-000000000000",
+      "contract-number": "00000000"
+    },
+    "handlers": [
+      {
+        "handler": "com.ionos.api.cloud",
+        "data": { "endpoint": "datacenters/{datacenterUuid}/servers/{uuid}/reboot" }
+      },
+      {
+        "handler": "heartbeat-monitor.syslog",
+        "data": { "message": "VM failure detected, server {name} in {datacenterUuid} was reset" }
+      },
+      {
+        "handler": "heartbeat-monitor.email",
+        "data": { "content": "Server '{name}' in Data Center with UUID {datacenterUuid} (Contract-Nr. {contract-number}) was reset.\n\nPlease have a look at the logs and inform the customer if necessary." }
+      }
+    ]
+}
